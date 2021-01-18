@@ -1,0 +1,35 @@
+body {
+
+    background-image: url("Coronabier.jpg");
+
+    background-repeat: no-repeat;
+
+    background-size: 1500px 800px;
+
+    
+
+}
+
+ 
+
+h1 {
+
+    color: rgb(100, 10, 10);
+
+    text-align: center;
+
+    
+
+}
+
+ 
+
+p1,p2,p3,p4 {
+
+    color: rgb(110, 10, 10);
+
+    font-family: verdana;
+
+    font-size: 25px;
+
+}
