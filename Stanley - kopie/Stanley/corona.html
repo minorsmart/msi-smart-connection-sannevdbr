@@ -1,0 +1,105 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>CoViD-19</title>
+
+        <link rel="stylesheet" type="text/css" href="Css/Coronastyle.css">
+
+    </head>
+
+    <body>
+
+        <h1>
+
+            CoViD-19 numbers in the
+
+            <div id="land"></div>
+
+        </h1>
+
+        <p1>    
+
+            New confirmed infections:
+
+            <div id="infectionsN"></div>
+
+            </p1>
+
+            <br>
+
+        <p2>
+
+            Deaths today:
+
+            <div id="deathsN"></div>
+
+            </p2>
+
+            <br>
+
+        <p3>
+
+            Total deaths:
+
+            <div id="deathsT"></div>
+
+            </p3>
+
+            <br>
+
+        <p4>
+
+            Datum:
+
+            <div id="datum"></div>
+
+            </p4>
+
+        
+
+    </div>
+
+ 
+
+            <script lang="text/javascript">
+
+                fetch('https://api.covid19api.com/summary')
+
+                    .then(function(resp) { return resp.json() })
+
+                    .then(function(data) {
+
+                    console.log(data);
+
+                    console.log(data.Countries[119].Country);
+
+                    console.log(data.Countries[119].TotalDeaths);
+
+                    document.getElementById("land").innerHTML = (data.Countries[119].Country);
+
+                    document.getElementById("datum").innerHTML = (data.Countries[119].Date);
+
+                    document.getElementById("deathsT").innerHTML = (data.Countries[119].TotalDeaths);
+
+                    document.getElementById("deathsN").innerHTML = (data.Countries[119].NewDeaths);
+
+                    document.getElementById("infectionsN").innerHTML = (data.Countries[119].NewConfirmed);
+
+                    })
+
+                    .catch(function() { 
+
+                    });
+
+            </script>
+
+    </body>
+
+ 
+
+</html>
